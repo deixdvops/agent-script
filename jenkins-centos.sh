@@ -5,7 +5,7 @@
 #Update Server before Jenkins Installation
 sudo yum update -y
 #Installing Java
-sudo yum install java-1.8.0-openjdk-devel
+sudo yum install -y java-1.8.0-openjdk-devel
 sleep 2
 
 #Enable the Jenkins repository
@@ -13,7 +13,7 @@ curl --silent --location http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo | 
 #Add the repository to your system
 sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
 #Once the repository is enabled, install the latest stable version of Jenkins by typing:
-sudo yum install jenkins
+sudo yum install jenkins -y
 #After the installation process is completed, start the Jenkins service with:
 sudo systemctl start jenkins
 #To check whether it started successfully run:
