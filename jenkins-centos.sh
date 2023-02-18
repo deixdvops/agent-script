@@ -24,5 +24,8 @@ sudo systemctl enable jenkins
 #Adjust the Firewall
 sleep 2
 #If you are installing Jenkins on a remote CentOS server that is protected by a firewall you need to port 8080
+sudo systemctl start firewalld
+sudo systemctl enable firewalld
 sudo firewall-cmd --permanent --zone=public --add-port=8080/tcp
 sudo firewall-cmd --reload
+sudo systemctl status firewalld
